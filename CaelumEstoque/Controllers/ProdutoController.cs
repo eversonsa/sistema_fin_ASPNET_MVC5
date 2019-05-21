@@ -24,6 +24,7 @@ namespace CaelumEstoque.Controllers
             CategoriasDAO categorias = new CategoriasDAO();
             IList<CategoriaDoProduto> categoria = categorias.Lista();
             ViewBag.Categorias = categoria;
+            ViewBag.Produto = new Produto();
             return View();
         }
 
@@ -43,10 +44,9 @@ namespace CaelumEstoque.Controllers
             }
             else
             {
-                ProdutosDAO produtos = new ProdutosDAO();
                 CategoriasDAO categorias = new CategoriasDAO();
                 ViewBag.Categorias = categorias.Lista();
-                ViewBag.Produtos = produtos;
+                ViewBag.Produto = produto;
                 return View("Form");
             }
         }
