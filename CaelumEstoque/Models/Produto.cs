@@ -10,6 +10,7 @@ namespace CaelumEstoque.Models
     {
         public int Id { get; set; }
 
+        [Required]
         public String Nome { get; set; }
 
         public float Preco { get; set; }
