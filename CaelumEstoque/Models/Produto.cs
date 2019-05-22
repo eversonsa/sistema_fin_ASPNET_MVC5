@@ -11,8 +11,10 @@ namespace CaelumEstoque.Models
         public int Id { get; set; }
 
         [Required]
+        [StringLength(60, MinimumLength = 3)]
         public String Nome { get; set; }
 
+        [Required]
         public float Preco { get; set; }
 
         public CategoriaDoProduto Categoria { get; set; }
