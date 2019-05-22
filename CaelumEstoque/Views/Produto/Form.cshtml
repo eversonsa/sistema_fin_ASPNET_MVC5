@@ -15,24 +15,27 @@
         <h1>Formulario</h1>
         <form action="/Produto/Adiciona" method="post">
             <label for="nome">Nome:</label>
-            <input id="nome" name="produto.Nome" /></br>
+            <input id="nome" name="produto.Nome" value="@ViewBag.Produto.Nome" /></br>
+            @Html.ValidationMessage("produto.precoInferior")
 
             <label for="preco">Preço:</label>
-            <input id="preco" name="produto.Preco" /></br>
+            <input id="preco" name="produto.Preco" value="@ViewBag.Produto.Preco" /></br>
 
             <label for="quantidade">Quantidade:</label>
-            <input id="quantidade" name="produto.Quantidade" /></br>
+            <input id="quantidade" name="produto.Quantidade" value="@ViewBag.Produto.Quantidade" /></br>
 
             <label for="descricao">Descrição:</label>
-            <input id="descricao" name="produto.Descricao" /></br>
+            <input id="descricao" name="produto.Descricao" value="@ViewBag.Produto.Descricao" /></br>
 
             <label for="categoria">Categoria:</label>
             <select id="categoria" name="produto.CategoriaId">
                 @foreach (var categoria in ViewBag.Categorias)
                 {
-                    <option value="@categoria.Id">@categoria.Nome</option>
+                    <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produto.CategoriaId)">
+                        @categoria.Nome
+                    </option>
                 }
-            </select></br>
+            </select>
 
             <input type="submit" />
         </form>
