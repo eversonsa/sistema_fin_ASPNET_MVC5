@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+</head>
+<body>
+    <div>
+        <h1>Formulario</h1>
+        <form action="/Produto/Adiciona" method="post">
+            <label for="nome">Nome:</label>
+            <input id="nome" name="produto.Nome" /></br>
+
+            <label for="preco">Preço:</label>
+            <input id="preco" name="produto.Preco" /></br>
+
+            <label for="quantidade">Quantidade:</label>
+            <input id="quantidade" name="produto.Quantidade" /></br>
+
+            <label for="descricao">Descrição:</label>
+            <input id="descricao" name="produto.Descricao" /></br>
+
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="produto.CategoriaId">
+                @foreach (var categoria in ViewBag.Categorias)
+                {
+                    <option value="@categoria.Id">@categoria.Nome</option>
+                }
+            </select></br>
+
+            <input type="submit" />
+        </form>
+    </div>
+</body>
+</html>
