@@ -62,7 +62,6 @@ C:\Users\everson\Documents\c#\CaelumEstoque\CaelumEstoque\bin\System.Web.Webpage
 C:\Users\everson\Documents\c#\CaelumEstoque\CaelumEstoque\bin\System.Web.Webpages.Razor.xml
 C:\Users\everson\Documents\c#\CaelumEstoque\CaelumEstoque\bin\System.Web.Helpers.xml
 C:\Users\everson\Documents\c#\CaelumEstoque\CaelumEstoque\bin\System.Web.Mvc.xml
-C:\Users\everson\Documents\c#\CaelumEstoque\CaelumEstoque\obj\Debug\CaelumEstoque.csprojAssemblyReference.cache
 C:\Users\everson\Documents\c#\CaelumEstoque\CaelumEstoque\obj\Debug\CaelumEstoque.csproj.CoreCompileInputs.cache
 C:\Users\everson\Documents\c#\CaelumEstoque\CaelumEstoque\obj\Debug\CaelumEstoque.csproj.CopyComplete
 C:\Users\everson\Documents\c#\CaelumEstoque\CaelumEstoque\obj\Debug\CaelumEstoque.dll

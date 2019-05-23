@@ -1,44 +1,28 @@
 
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Form</title>
-</head>
-<body>
-    <div>
         <h1>Formulario</h1>
         <form action="/Produto/Adiciona" method="post">
             <label for="nome">Nome:</label>
-            <input id="nome" name="produto.Nome" value="@ViewBag.Produto.Nome" /></br>
+            <input id="nome" name="produto.Nome" value="@ViewBag.Produto.Nome" class="form-control" /></br>
             @Html.ValidationMessage("produto.precoInferior")
 
             <label for="preco">Preço:</label>
-            <input id="preco" name="produto.Preco" value="@ViewBag.Produto.Preco" /></br>
+            <input id="preco" name="produto.Preco" value="@ViewBag.Produto.Preco" class="form-control" /></br>
 
             <label for="quantidade">Quantidade:</label>
-            <input id="quantidade" name="produto.Quantidade" value="@ViewBag.Produto.Quantidade" /></br>
+            <input id="quantidade" name="produto.Quantidade" value="@ViewBag.Produto.Quantidade" class="form-control" /></br>
 
             <label for="descricao">Descrição:</label>
-            <input id="descricao" name="produto.Descricao" value="@ViewBag.Produto.Descricao" /></br>
+            <input id="descricao" name="produto.Descricao" value="@ViewBag.Produto.Descricao" class="form-control" /></br>
 
             <label for="categoria">Categoria:</label>
-            <select id="categoria" name="produto.CategoriaId">
+            <select id="categoria" name="produto.CategoriaId" class="form-control">
                 @foreach (var categoria in ViewBag.Categorias)
                 {
-                    <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produto.CategoriaId)">
-                        @categoria.Nome
-                    </option>
+                <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produto.CategoriaId)">
+                    @categoria.Nome
+                </option>
                 }
             </select>
 
             <input type="submit" />
         </form>
-    </div>
-</body>
-</html>
